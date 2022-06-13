@@ -1,3 +1,15 @@
+{% if messages %}
+{% for m in messages %}
+
+{% if m.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+<div class="alert alert-danger text-center w-100 messages" role="alert">
+  {{ m }}
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
