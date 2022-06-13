@@ -1,0 +1,282 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPS home</title>
+
+    <!--Bootsrap 5 CDN for CSS framework-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        body, .maincontainer{
+            margin: 0;
+            padding: 0%;
+            background-color: aliceblue;
+            overflow-x: hidden;
+        }
+
+        nav{
+            background-color: rgb(192, 197, 32);
+            background: #c94b4b;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #cabd2f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #2892d0, #b3d6f5); 
+
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: aliceblue;
+
+            -webkit-box-shadow: 0px 10px 26px -7px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 10px 26px -7px rgba(0,0,0,0.75);
+            box-shadow: 0px 8px 8px -7px rgba(0,0,0,0.75);
+        }
+        
+        nav, a, .nav-link{
+            color: rgb(1, 1, 1);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-item{
+            padding-right: 1rem;
+        }
+
+        a:hover{
+            color:rgb(255, 251, 251);
+        }
+        .nav-link:hover{
+            color:rgb(255, 255, 255);
+        }
+
+        .fa-bars{
+            margin:0;
+            padding: 0%;
+            align-self: center;
+        }
+
+        .landing-page{
+            background: linear-gradient(to right, #cad028, #e7f18f);
+        }
+
+        .about{
+            /* max-width: 440px; */
+            align-items: center;
+        }
+
+        /* Session buttons */
+        .btncard{
+            background-color: transparent;
+            border-radius: .3rem;
+            border: solid .15rem black;
+            padding: 1.4rem;
+            transition: .3s;
+            box-shadow: 0px 8px 8px -7px rgba(0,0,0,0.75);
+        }
+        
+        .card-body img{
+            max-width: 260px;
+            max-height: 260px;
+            width:250px;
+            object-fit:cover;
+        }
+
+        .btncard:hover{
+            background-color: #ebb00c;
+            border:solid .15rem #ebb00c ;
+            transform: scale(90%);
+        }
+
+
+        @media screen and (max-width: 800px) {
+
+            .about{
+                padding-top: 0;
+            }
+            .about img{
+                width: 250px;
+                
+            }
+
+            .card-body img{
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
+
+        body::-webkit-scrollbar {
+            width: .6rem;
+        }
+        
+        body::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        body::-webkit-scrollbar-thumb {
+            background-color: rgb(77, 114, 226);
+            outline: 1px solid rgb(234, 240, 246);
+        }
+
+        .works .card-header{
+            background-color: transparent;
+        }
+
+        .works .card{
+            background-color: transparent;
+            
+        }
+
+        footer{
+            background-color: #2892d0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid maincontainer">
+
+        
+    <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg py-2">
+            <div class="container">
+            <!-- <a class="navbar-brand" href="#">CAPS</a> -->
+            <img class="navbar-brand py-3" src="capslogo2.png" alt="">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <i class="fa-solid fa-bars navbar-toggler-icon"> </i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 py-3 ">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sessions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Session status</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">LOGIN</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+    <!--landing page -->
+        <div class="container-fluid landing-page">
+            <div class="row py-5">
+                <div class="col-md-4 about">
+                    <img class="img-fluid mx-auto" src="Component 12.png" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="row row-cols-1 row-cols-md-2 g-4 ">
+                        <div class="col p-lg-5 p-sm-3">
+                          <div class="card btncard">
+                            <img src="one.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">One to one session</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col p-lg-5 p-sm-3">
+                          <div class="card btncard">
+                            <img src="grp.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Group session</h5>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- working information page-->
+        <div class="container-fluid works p-4">
+            <div class="card-header">
+                <h3 class="text-center py-2">How CAPS Session-booking works?</h3>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
+                
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Session request</h5>
+                      <p class="card-text">Select which kind of session you want to select. One-on-one(if you are a student) or Peer-learning ( if you are a faculty requesting for your class) </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Fill the form</h5>
+                      <p class="card-text">Fill the form providing the requested data. If you are a faculty, register first to request the Peer session.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Check the Emails</h5>
+                      <p class="card-text">Once your request has been accepted , you will recieve an email from CAPS informing the date and volunteer details for the session.</p>
+                    </div>
+                  </div>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Footer -->
+      <footer class=" text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-dark btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-dark btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a class="btn btn-dark btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a class="btn btn-dark btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a class="btn btn-dark btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+      
+            <!-- Github -->
+            <a class="btn btn-dark btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright 
+          <a class="text-white foottext" href="#"> Shantify.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+
+    </body>
+</html>
