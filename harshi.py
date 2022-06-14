@@ -1,3 +1,48 @@
+#--------------------------------------------------- Department  views-----------------------------------------------------------------
+def deptaddformfunc(request):
+    form =deptaddform()
+    if depttbl.objects.exists():
+        temp = depttbl.objects.all()
+    
+    context = {'temp':temp, 'form':form}
+    if request.method == "POST":
+        form = deptaddform(request.POST)
+        if form.is_valid():
+            messages.success(request, "form saved")
+            a = form.save(commit = False)
+            a.save()
+            form = deptaddform()
+        else:
+            messages.error(request, "cannot add dept. Invalid information.")
+    return render (request,"deptaddform.html", context)
+
+def deptdeletefunc(request, pkid):
+    record=depttbl.objects.get(id=pkid)
+    print(record)
+    record.delete()
+    messages.success(request, "record deleted")
+    return redirect("deptaddform_url")
+
+
+def deptupdatefunc(request, pkid):
+    record=depttbl.objects.get(id=pkid)
+    form = deptaddform(instance=record)
+    if request.method == "POST":
+        form = deptaddform(request.POST,instance=record)
+        if form.is_valid():
+            messages.success(request, "form saved")
+            print("success")
+            a = form.save(commit = False)
+            a.save()
+            messages.success(request, "manga form saved")
+        else:
+            messages.error(request, "cannot update department. Invalid info.")
+        return redirect("deptaddform_url")
+    
+    context={'form':form}
+    return render (request,"deptupdateform.html", context)
+
+
 #_______________________________________________________________accounts models_____________________________________________________________
 
 
